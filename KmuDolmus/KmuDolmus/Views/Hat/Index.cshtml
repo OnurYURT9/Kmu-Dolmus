@@ -1,0 +1,33 @@
+﻿
+@using KmuDolmus.Models
+@model List<Hatlar>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<h1>1 Nolu Dolmus Hattı</h1>
+
+<table class="table table-bordered ">
+    <tr>
+
+        <th>hat</th>
+        <th>Kalkış Saatleri</th>
+        <th>Yön</th>
+        <th>Gün</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.hat_Numara</th>
+            <th>@x.hat_saat</th>
+            <th>@x.yon</th>
+            <th>@x.Gun.GunAd</th>
+
+        </tr>
+    }
+
+
+</table>
