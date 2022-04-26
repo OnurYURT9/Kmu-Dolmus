@@ -6,13 +6,12 @@
     Layout = "~/Pages/Shared/_TestLayout.cshtml";
 }
 
-<br />
-<h1>1 Nolu Dolmus Hattı</h1>
+
 
 <table class="table table-bordered ">
     <tr>
 
-        <th>hat</th>
+        <th>Hatlar</th>
         <th>Kalkış Saatleri</th>
         <th>Yön</th>
         <th>Gün</th>
@@ -20,14 +19,34 @@
     </tr>
     @foreach (var x in Model)
     {
-        <tr>
-            <th>@x.hat_Numara</th>
-            <th>@x.hat_saat</th>
-            <th>@x.yon</th>
-            <th>@x.Gun.GunAd</th>
+        /*
+        <br />
+        <form class="form-group" method="post">
+           <b>Gün Seç</b>
+            @Html.TextBoxFor(x=>x.Gunad)
+        </form>
+        <br />
+       */
+         DateTime now = DateTime.Now;
+        DateTime dateTime = Convert.ToDateTime(x.hat_saat);
 
-        </tr>
+        DateTime saat = now;
+        string st = saat.ToString();
+
+        DateTime saat2 = saat.AddHours(1);
+        if (dateTime.TimeOfDay >= saat.TimeOfDay && dateTime.TimeOfDay <= saat2.TimeOfDay)
+        {
+            <tr>
+                <th>@x.hat_Numara</th>
+                <th>@x.hat_saat</th>
+                <th>@x.Yon.Yonad</th>
+                <th>@x.Gun.GunAd</th>
+               
+            </tr>
+        }
     }
 
 
+
 </table>
+
