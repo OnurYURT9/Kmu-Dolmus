@@ -1,0 +1,91 @@
+﻿@using KmuDolmus.Models
+@model UserSignUpViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, KmuDolmus
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <title>Üye Kayıt Olma Sayfası</title>
+    <!-- <link rel="stylesheet" type="text/css" href="~/signup_catalytic_originals-master/form.css  -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.png" />
+
+</head>
+<body>
+    <div class="container">
+        <center><h2 id="title" class="text-center">Üye Kayıt Olma Sayfası</h2></center>
+        <header class="header">
+
+            <center>
+                <a>Üye Kayıt Olma Sayfası</a>
+            </center>
+            <br>
+
+        </header>
+        <center>
+            <form id="survey-form" class="m-t" role="form" asp-action="Index">
+                <br>
+                <div class="form-group">
+                    <label id="name-label" for="Name">Ad</label>
+                    <input type="text" name="nameSurname" id="nameSurname" class="form-control" asp-for="@Model.nameSurname" placeholder="Adınızı Giriniz" required="">
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label id="email-label" for="Email">Email</label>
+                    <input type="text" name="Mail" id="Mail" class="form-control" placeholder="Enter Your Email" asp-for="@Model.Mail" required="">
+                </div>
+
+                <br>
+                <div class="form-group">
+                    <label id="email-label" for="Email">Usarname</label>
+                    <input type="text" name="UserName" id="UserName" class="form-control" placeholder="Kullanıcı Adınız" asp-for="@Model.UserName" required="">
+                </div>
+
+                <br>
+                <div class="form-group">
+                    <label id="password-label" for="password">Şifre</label>
+                    <input type="password" name="Password" id="Password" class="form-control" placeholder="Kullanıcı Şiresi" asp-for="@Model.Password" required="">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label id="password-label" for="password">Şifre</label>
+                    <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-control" placeholder="Şifre Tekrar" asp-for="@Model.ConfirmPassword" required="">
+                </div>
+
+                <br>
+                <br>
+                <div class="form-group sub">
+                    <center>
+                        <button type="submit" id="submit" class="btn btn-primary block full-width m-b">
+                            Kayıt Ol
+                        </button>
+                        <br />
+
+                    </center>
+                </div>
+                <div class="text-danger" asp-validation-summary="ModelOnly">
+
+                </div>
+                <div class="form-group sub">
+                    <center>
+                        <button type="submit" class="submit-button" href="/Login/Index">Giriş Yap</button>
+
+                    </center>
+                </div>
+            </form>
+    </div>
+    <br>
+    </center>
+
+
+</body>
+
+
+</html>

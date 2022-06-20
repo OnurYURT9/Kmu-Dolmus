@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_TestLayout.cshtml";
+}
+
+@using KmuDolmus.Models
+@model List<Durak>
+<table class="table table-bordered ">
+    <tr>
+        <th>Kacıncı Durak</th>
+        <th>Durak</th>
+        <th>Üniversiteye Uzaklık</th>
+
+
+    </tr>
+    <h1>1 Numaralı Hattın Güzergahı Ve Geçtiği Duraklar</h1>
+    <img src="~/1 numara.png" class="img" alt="My image" />
+    @foreach (var x in Model)
+    {
+
+        if (x.hat_numara == "1" || x.hat_numara == "1-6")
+        {
+
+            <tr>
+                <th>@x.DurakID</th>
+                <th>@x.Durakad</th>
+                <th>@x.Universiteye_Uzaklik</th>
+            </tr>
+        }
+
+    }
+
+
+
+</table>
+<table class="table table-bordered ">
+    <tr>
+        <th>Kaçıncı Durak</th>
+        <th>Durak</th>
+        <th>Üniversiteye Uzaklık</th>
+
+    </tr>
+    <h1>6 Numaralı Hattın Güzergahı Ve Geçtiği Duraklar</h1>
+    <img src="~/6 numara.png" class="img" alt="My image" />
+    @foreach (var x in Model)
+    {
+
+        if (x.hat_numara == "6" || x.hat_numara == "1-6")
+        {
+
+
+            <tr>
+                <th>@x.DurakID</th>
+                <th>@x.Durakad</th>
+                <th>@x.Universiteye_Uzaklik</th>
+            </tr>
+        }
+
+    }
+
+
+
+</table>
+

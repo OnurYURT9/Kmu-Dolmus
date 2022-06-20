@@ -1,0 +1,67 @@
+﻿@using KmuDolmus.Models
+@model UserSignInViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, KmuDolmus
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V6</title>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <center>
+        <div class="limiter">
+            <div class="container">
+                <div class="wrap-login100 p-t-20 p-b-20">
+                    <form method="post">
+
+
+                        <span class="login100-form-avatar">
+                            <img src="~/Login_v6/images/kmu.jpg">
+                        </span>
+                        <h1>
+                            Karamanoğlu Mehmetbey Üniversitesi Dolmuş Hat Ve Seferleri Giriş Ekranı
+                        </h1>
+                        <div class="form-group">
+                            <label for="exampleInputEmail mb-2">Kullanıcı Adınız</label>
+                            <input type="text" class="form-control" asp-for="@Model.username" placeholder="" required="">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1 mb-2">Şifre</label>
+                            <input type="password" class="form-control" asp-for="@Model.password" placeholder="" required="">
+
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="btn btn-primary">
+                                Giriş Yap
+                            </button>
+                        </div>
+
+                        <ul class="login-more p-t-40">
+                            <li>
+
+                                <h8>Kayıtlı Değil Misin?</h8>
+                                <a href="~/RegisterUser" class="txt2">
+                                    Kayıt Ol
+                                </a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </center>
+
+
+
+
+
+</body>
+</html>
