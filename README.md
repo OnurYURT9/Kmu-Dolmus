@@ -1,4 +1,4 @@
 # BitirmeProjesi
 
-Karaman şehrinde bulunan dolmuş hat ve güzergahlarının eş zamanlı takibini gerçekleştiriltirilmiştir.
-Asp.Net core entity framework google earth teknolojileri kullanılmıştır.
+Karaman şehrinde bulunan üniversite dolmuş hat ve güzergahlarının eş zamanlı takibi gerçekleştirilmiştir.
+Asp.Net core entity framework core mssql google earth teknolojileri kullanılmıştır.
